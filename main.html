@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Pag</title>
+    <script>
+        async function sendData() {
+            const data = { name: 'taekyung', id: 23011927 };
+            const response = await fetch('http://localhost:8080/api/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert('Data saved successfully!');
+            } else {
+                alert('Error saving data.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Testing...</h3>
+    <button onclick="sendData()">Send Data</button>
+</body>
+</html>
