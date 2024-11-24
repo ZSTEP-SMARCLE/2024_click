@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EJS Test</title>
+</head>
+<body>
+    <h1><%= message %></h1>
+    <form action="/api/save" method="POST">
+        <label>Name: <input type="text" name="name" /></label><br/>
+        <label>ID: <input type="text" name="id" /></label><br/>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
